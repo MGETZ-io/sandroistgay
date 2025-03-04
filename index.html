@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Magenta TV – Das Beste an Entertainment</title>
+    <title>FM.FreshUp – Dein Radio</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #ff007f, #9300ff);
+            background: #121212;
             color: white;
             text-align: center;
             overflow-x: hidden;
         }
 
         h1 {
-            font-size: 48px;
-            margin-top: 80px;
+            font-size: 40px;
+            margin-top: 30px;
             animation: float 2s infinite alternate ease-in-out;
         }
 
@@ -26,11 +26,11 @@
             to { transform: translateY(10px); }
         }
 
-        .magenta-logo {
-            width: 120px;
+        .radio-logo {
+            width: 200px;
             margin: 20px auto;
             display: block;
-            opacity: 0;
+            border-radius: 10px;
             animation: fadeIn 1.5s ease-out forwards;
         }
 
@@ -39,26 +39,24 @@
             to { opacity: 1; transform: scale(1); }
         }
 
-        .info {
-            font-size: 20px;
-            max-width: 600px;
-            margin: 40px auto;
+        .player-container {
+            margin-top: 20px;
             padding: 20px;
-            background: rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 10px;
             backdrop-filter: blur(10px);
             box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 1s ease-out;
+            display: inline-block;
         }
 
-        .show {
-            opacity: 1;
-            transform: translateY(0);
+        audio {
+            width: 100%;
+            max-width: 300px;
+            margin-top: 10px;
+            border-radius: 5px;
         }
 
-        .cta-button {
+        .play-button {
             display: inline-block;
             margin-top: 20px;
             padding: 15px 30px;
@@ -74,7 +72,7 @@
             transition: all 0.3s ease-in-out;
         }
 
-        .cta-button:hover {
+        .play-button:hover {
             transform: scale(1.1);
             box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.7);
         }
@@ -82,23 +80,17 @@
 </head>
 <body>
 
-    <h1>Magenta TV – Dein Entertainment</h1>
+    <h1>🎵 FM.FreshUp – Dein Sound, Dein Style 🎵</h1>
 
-    <img src="image.jpg" 
-         alt="Magenta TV Logo" class="magenta-logo">
+    <img src="Image.jpg" alt="FM.FreshUp Logo" class="radio-logo">
 
-    <div class="info" id="magenta-info">
-        <p>Erlebe Filme, Serien und Live-TV in bester Qualität – mit Magenta TV. Jetzt streamen, jederzeit und überall!</p>
-        <a href="#" class="cta-button">Jetzt testen</a>
+    <div class="player-container">
+        <p>🔊 Jetzt live hören:</p>
+        <audio controls>
+            <source src="https://stream.laut.fm/FM-FreshUp" type="audio/mpeg">
+            Dein Browser unterstützt kein Audio-Streaming.
+        </audio>
     </div>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            setTimeout(() => {
-                document.getElementById("magenta-info").classList.add("show");
-            }, 1000);
-        });
-    </script>
 
 </body>
 </html>
