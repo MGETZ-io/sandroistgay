@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sandro – Der Coolste</title>
+    <title>Magenta TV – Das Beste an Entertainment</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #ff416c, #ff4b2b);
+            background: linear-gradient(135deg, #ff007f, #9300ff);
             color: white;
             text-align: center;
             overflow-x: hidden;
         }
 
         h1 {
-            font-size: 50px;
-            margin-top: 50px;
+            font-size: 48px;
+            margin-top: 80px;
             animation: float 2s infinite alternate ease-in-out;
         }
 
@@ -26,17 +26,17 @@
             to { transform: translateY(10px); }
         }
 
-        .sandro-img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
+        .magenta-logo {
+            width: 120px;
             margin: 20px auto;
             display: block;
-            transition: transform 0.3s ease-in-out;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-out forwards;
         }
 
-        .sandro-img:hover {
-            transform: scale(1.1);
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
         }
 
         .info {
@@ -44,8 +44,10 @@
             max-width: 600px;
             margin: 40px auto;
             padding: 20px;
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.15);
             border-radius: 10px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
             opacity: 0;
             transform: translateY(20px);
             transition: all 1s ease-out;
@@ -55,23 +57,45 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 22px;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(90deg, #ff007f, #ff4b2b);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.7);
+        }
     </style>
 </head>
 <body>
 
-    <h1>Willkommen bei Sandro!</h1>
+    <h1>Magenta TV – Dein Entertainment</h1>
 
-    <img src="https://via.placeholder.com/200" alt="Sandro" class="sandro-img">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/MagentaTV_logo_2019.svg/320px-MagentaTV_logo_2019.svg.png" 
+         alt="Magenta TV Logo" class="magenta-logo">
 
-    <div class="info" id="sandro-info">
-        <p>Sandro ist einfach der Beste. Er ist ein kreativer Kopf, ein großartiger Freund und hat immer die besten Ideen. 🎉</p>
-        <p>Wenn du ihn triffst, wirst du sofort merken: Er ist einzigartig!</p>
+    <div class="info" id="magenta-info">
+        <p>Erlebe Filme, Serien und Live-TV in bester Qualität – mit Magenta TV. Jetzt streamen, jederzeit und überall!</p>
+        <a href="#" class="cta-button">Jetzt testen</a>
     </div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             setTimeout(() => {
-                document.getElementById("sandro-info").classList.add("show");
+                document.getElementById("magenta-info").classList.add("show");
             }, 1000);
         });
     </script>
