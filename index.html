@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FM.FreshUp – Dein Radio</title>
+    <title>FM.FreshUp – Immer live!</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -55,39 +55,18 @@
             margin-top: 10px;
             border-radius: 5px;
         }
-
-        .play-button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 15px 30px;
-            font-size: 22px;
-            font-weight: bold;
-            color: white;
-            background: linear-gradient(90deg, #ff007f, #ff4b2b);
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            text-decoration: none;
-            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
-            transition: all 0.3s ease-in-out;
-        }
-
-        .play-button:hover {
-            transform: scale(1.1);
-            box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.7);
-        }
     </style>
 </head>
 <body>
 
-    <h1>🎵 FM.FreshUp – Dein Sound, Dein Style 🎵</h1>
+    <h1>🎵 FM.FreshUp – Immer live! 🎵</h1>
 
     <img src="image.jpg" alt="FM.FreshUp Logo" class="radio-logo">
 
     <div class="player-container">
         <p>🔊 Jetzt live hören:</p>
-        <audio controls>
-            <source src="https://stream.laut.fm/FM-FreshUp" type="audio/mpeg">
+        <audio controls autoplay>
+            <source src="https://stream.laut.fm/fm-freshup" type="audio/mpeg">
             Dein Browser unterstützt kein Audio-Streaming.
         </audio>
     </div>
