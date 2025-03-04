@@ -1,1 +1,80 @@
-Sandro ist Schwul
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandro – Der Coolste</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ff416c, #ff4b2b);
+            color: white;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            font-size: 50px;
+            margin-top: 50px;
+            animation: float 2s infinite alternate ease-in-out;
+        }
+
+        @keyframes float {
+            from { transform: translateY(0px); }
+            to { transform: translateY(10px); }
+        }
+
+        .sandro-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin: 20px auto;
+            display: block;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .sandro-img:hover {
+            transform: scale(1.1);
+        }
+
+        .info {
+            font-size: 20px;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 1s ease-out;
+        }
+
+        .show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Willkommen bei Sandro!</h1>
+
+    <img src="https://via.placeholder.com/200" alt="Sandro" class="sandro-img">
+
+    <div class="info" id="sandro-info">
+        <p>Sandro ist einfach der Beste. Er ist ein kreativer Kopf, ein großartiger Freund und hat immer die besten Ideen. 🎉</p>
+        <p>Wenn du ihn triffst, wirst du sofort merken: Er ist einzigartig!</p>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            setTimeout(() => {
+                document.getElementById("sandro-info").classList.add("show");
+            }, 1000);
+        });
+    </script>
+
+</body>
+</html>
