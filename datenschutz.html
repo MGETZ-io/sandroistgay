@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RockStones - Tickets kaufen</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #111;
+            color: white;
+            text-align: center;
+        }
+
+        header {
+            background: url('concert.jpg') center/cover no-repeat;
+            padding: 60px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .ticket-container {
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            width: 80%;
+            max-width: 400px;
+        }
+
+        label, select, input {
+            font-size: 16px;
+            display: block;
+            margin: 10px auto;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        button {
+            background: #ff0000;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #cc0000;
+        }
+
+        .price {
+            font-size: 20px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>🎸 RockStones Live Tour 2025 🎤</header>
+
+    <div class="ticket-container">
+        <h2>Tickets kaufen</h2>
+        
+        <label for="ticketType">Ticket-Kategorie:</label>
+        <select id="ticketType">
+            <option value="40">Stehplatz - 40€</option>
+            <option value="60">Sitzplatz - 60€</option>
+            <option value="120">VIP - 120€</option>
+        </select>
+
+        <label for="ticketCount">Anzahl:</label>
+        <input type="number" id="ticketCount" value="1" min="1">
+
+        <p class="price">Gesamtpreis: <span id="totalPrice">40</span>€</p>
+
+        <button onclick="buyTickets()">Jetzt kaufen</button>
+    </div>
+
+    <script>
+        function updatePrice() {
+            let ticketType = document.getElementById("ticketType").value;
+            let ticketCount = document.getElementById("ticketCount").value;
+            document.getElementById("totalPrice").innerText = ticketType * ticketCount;
+        }
+
+        document.getElementById("ticketType").addEventListener("change", updatePrice);
+        document.getElementById("ticketCount").addEventListener("input", updatePrice);
+
+        function buyTickets() {
+            alert("Danke für deinen Kauf! 🎫");
+        }
+    </script>
+
+</body>
+</html>
