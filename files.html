@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datei-System | Lernmaterial</title>
+    <style>
+        * {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #1e1e2e;
+            color: white;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #2a2a3b;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .file-list {
+            list-style: none;
+            padding: 0;
+        }
+        .file-list li {
+            background: #3a3a4a;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .file-list a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        .file-list a:hover {
+            text-decoration: underline;
+        }
+        .logout {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: red;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Lernmaterial</h2>
+        <ul class="file-list">
+            <li>Mathematik.pdf <a href="files/Mathematik.pdf" download>📥 Download</a></li>
+            <li>Deutsch.docx <a href="files/Deutsch.docx" download>📥 Download</a></li>
+            <li>Englisch.mp3 <a href="files/Englisch.mp3" download>📥 Download</a></li>
+        </ul>
+        <span class="logout" onclick="logout()">🚪 Abmelden</span>
+    </div>
+
+    <script>
+        function logout() {
+            window.location.href = "index.html"; // Zurück zur Login-Seite
+        }
+    </script>
+</body>
+</html>
