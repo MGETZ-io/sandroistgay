@@ -3,73 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login | Lernmaterial</title>
+    <title>Willkommen im Hotspot</title>
     <style>
-        * {
+        body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            background: #1e1e2e;
-            display: flex;
-            height: 100vh;
-            align-items: center;
-            justify-content: center;
-        }
-        .login-container {
-            background: #2a2a3b;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
             text-align: center;
-            width: 300px;
+            background-color: #f4f4f4;
         }
-        h2 {
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            font-size: 18px;
+            color: #666;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 18px;
             color: white;
-            margin-bottom: 20px;
-        }
-        input {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: none;
+            background-color: #007BFF;
+            text-decoration: none;
             border-radius: 5px;
+            margin-top: 20px;
         }
-        .btn {
-            width: 100%;
-            padding: 10px;
-            background: #007BFF;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .btn:hover {
-            background: #0056b3;
+        .footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #999;
         }
     </style>
 </head>
 <body>
-    <div class="login-container">
-        <h2>Login</h2>
-        <input type="text" id="username" placeholder="Benutzername">
-        <input type="password" id="password" placeholder="Passwort">
-        <button class="btn" onclick="login()">Anmelden</button>
+    <div class="container">
+        <h1>Willkommen im Hotspot</h1>
+        <p>Bitte akzeptiere die Nutzungsbedingungen, um Zugang zum Internet zu erhalten.</p>
+        <a href="http://neue-seite.de" class="button">Jetzt verbinden</a>
+        <div class="footer">&copy; 2025 Hol-dir-Hotspot.de</div>
     </div>
-
-    <script>
-        function login() {
-            var user = document.getElementById("username").value;
-            var pass = document.getElementById("password").value;
-            
-            if (user === "maxim.getz" && pass === "zuhauseisttoll") {
-                window.location.href = "files.html"; // Weiterleitung zur Datei-Seite
-            } else {
-                alert("Falsche Zugangsdaten!");
-            }
-        }
-    </script>
 </body>
 </html>
