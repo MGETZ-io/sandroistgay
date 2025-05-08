@@ -3,53 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Willkommen im Hotspot</title>
+    <title>You Are an Idiot</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        #container {
             text-align: center;
-            background-color: #f4f4f4;
-        }
-        .container {
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-            background: white;
+            background-color: #ff6347;
+            color: white;
+            padding: 50px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
+
         h1 {
-            color: #333;
+            font-size: 50px;
+            margin-bottom: 20px;
         }
+
         p {
-            font-size: 18px;
-            color: #666;
+            font-size: 20px;
+            margin-bottom: 20px;
         }
-        .button {
-            display: inline-block;
+
+        button {
             padding: 10px 20px;
             font-size: 18px;
-            color: white;
-            background-color: #007BFF;
-            text-decoration: none;
+            background-color: #fff;
+            color: #ff6347;
+            border: none;
             border-radius: 5px;
-            margin-top: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
         }
-        .footer {
-            margin-top: 30px;
-            font-size: 14px;
-            color: #999;
+
+        button:hover {
+            background-color: #ff4500;
+            color: white;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Willkommen im Hotspot</h1>
-        <p>Bitte akzeptiere die Nutzungsbedingungen, um Zugang zum Internet zu erhalten.</p>
-        <a href="http://neue-seite.de" class="button">Jetzt verbinden</a>
-        <div class="footer">&copy; 2025 Hol-dir-Hotspot.de</div>
+    <div id="container">
+        <h1>Du bist ein Idiot!</h1>
+        <p>Was hast du erwartet? 😄</p>
+        <button onclick="changeMessage()">Klick mich!</button>
     </div>
+
+    <script>
+        function changeMessage() {
+            const h1 = document.querySelector("h1");
+            h1.textContent = "Du bist wirklich ein Idiot! 😜";
+            document.body.style.backgroundColor = "#ff0000";  // Ändert den Hintergrund
+        }
+    </script>
 </body>
 </html>
