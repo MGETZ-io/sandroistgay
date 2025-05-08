@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warnung: Sicherheit in der Konsole</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            color: #ff6347;
+            font-size: 40px;
+        }
+
+        p {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .warning {
+            background-color: #ffcccc;
+            color: #cc0000;
+            padding: 20px;
+            border: 2px solid #cc0000;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 20px auto;
+            width: 80%;
+            border-radius: 10px;
+        }
+
+        .note {
+            background-color: #ffffcc;
+            color: #666;
+            padding: 15px;
+            font-size: 18px;
+            margin: 20px auto;
+            width: 80%;
+            border-radius: 10px;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Warnung vor Konsolen-Befehlen</h1>
+
+    <div class="warning">
+        <p><strong>STOP!</strong> Gebe keine Befehle in die Konsole ein oder füge keinen Code ein, den du nicht verstehst. Dies kann gefährlich sein und deinem Computer schaden!</p>
+        <p>Der Missbrauch von Konsolenbefehlen kann zu ernsthaften Sicherheitsrisiken führen. Achte darauf, niemals Code zu kopieren und einzufügen, den du nicht überprüft hast.</p>
+    </div>
+
+    <div class="note">
+        <h2>Was ist die Konsole?</h2>
+        <p>Die Konsole ist ein Entwicklertool, mit dem du direkt mit der Website oder Anwendung interagieren kannst. Sie ist jedoch mächtig und sollte mit Vorsicht verwendet werden. Schadhafter Code kann deine Daten stehlen, deinen Computer beschädigen oder unerwünschte Aktionen ausführen.</p>
+    </div>
+
+    <footer>
+        <p>Bleib sicher und achte darauf, was du in der Konsole ausführst!</p>
+    </footer>
+
+    <script>
+        // Konsolen-Warnung anzeigen
+        console.warn("%cSTOP! NICHTS IN DIE KONSOLE EINGEBEN!", "color: red; font-weight: bold; font-size: 20px;");
+        console.log("------------------------------------------------------");
+        console.log("WICHTIG: Gebe keine Befehle in die Konsole ein.");
+        console.log("Es könnten schadhafter Code oder Malware ausgeführt werden.");
+        console.log("Besuche für mehr Informationen über die Sicherheit von Konsolenbefehlen: https://www.example.com");
+        console.log("------------------------------------------------------");
+    </script>
+</body>
+</html>
