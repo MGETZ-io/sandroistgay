@@ -64,8 +64,14 @@
     </div>
 
     <script>
-        // Konsolenwarnung
-        console.warn("STOP hier nichts eingeben, du könntest gehackt werden!");
+        // Konsolenwarnung mit fett und rot
+        console.log("%cSTOP", "color: red; font-weight: bold; font-size: 20px;");
+        console.log("-------------------------------------------------");
+        console.log("ACHTUNG! Es wird dringend davon abgeraten, irgendetwas in der Konsole einzugeben!");
+        console.log("Du könntest deine Sicherheit gefährden und gefährlichen Code ausführen.");
+        console.log("Für weitere Informationen und mögliche Risiken, besuche:");
+        console.log("Website: %chttp://sandro.hustensaft.org/console-hacking", "color: blue; font-weight: normal;");
+        console.log("-------------------------------------------------");
 
         // Funktion, die beim Klick auf den Button ausgeführt wird
         function changeMessage() {
